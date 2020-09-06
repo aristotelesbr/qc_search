@@ -26,6 +26,9 @@ gem 'require_all', '~> 2.0'
 gem 'puma', '~> 4.3', '>= 4.3.5'
 # Intelligent search made easy with Rails and Elasticsearch
 gem 'searchkick', '~> 4.4', '>= 4.4.1'
+# Represent use cases in a simple and powerful way while writing modular,
+# expressive and sequentially logical code.
+gem 'u-case', '~> 4.0'
 
 group :development, :test do
   # Meta package that requires several pry extensions.
