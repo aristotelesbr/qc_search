@@ -2,4 +2,5 @@
 
 # Question entity
 class Question < ActiveRecord::Base
+  include QuesitonSearchable
 end
