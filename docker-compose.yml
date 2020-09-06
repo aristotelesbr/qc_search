@@ -7,6 +7,7 @@ services:
       - .:/qc_search:delegated
     depends_on:
       - db
+      - elasticsearch
     ports:
       - 5000:5000
     stdin_open: true
