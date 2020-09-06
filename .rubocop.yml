@@ -1,0 +1,17 @@
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
+  Exclude:
+    - "bin/**/*"
+    - "vendor/**/*"
+    - "db/**/*"
+    - "spec/rails_helper.rb"
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ["describe", "context", "feature", "scenario", "let"]
+
+Layout/LineLength:
+  Max: 80
