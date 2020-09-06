@@ -5,6 +5,8 @@ services:
     build: .
     volumes:
       - .:/qc_search:delegated
+    depends_on:
+      - db
     ports:
       - 5000:5000
     stdin_open: true
@@ -12,3 +14,14 @@ services:
     env_file:
       - ".env"
     command: foreman start
+
+  db:
+    container_name: qc_search_db
+    restart: always
+    image: postgres:11
+    volumes:
+      - ./data/postgres/db:/var/lib/postgresql/data:delegated
+    ports:
+      - 5432
+    env_file:
+      - ".env"
