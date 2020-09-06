@@ -30,4 +30,6 @@ group :development, :test do
   gem 'foreman', '0.87.1'
   # Process manager for applications with multiple components
   gem 'pry-meta'
+  # BDD for Ruby
+  gem 'rspec', '~> 3.9'
 end
