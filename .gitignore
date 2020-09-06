@@ -2,3 +2,4 @@
 data/*
 !data/questions.json
 !data/question_access.json
+db/schema.rb
