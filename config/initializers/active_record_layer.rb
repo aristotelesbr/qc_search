@@ -1,10 +1,5 @@
 # frozen_string_literal: true
 
-ENV['SINATRA_ENV'] ||= 'development'
-
-require 'bundler/setup'
-Bundler.require(:default, ENV['SINATRA_ENV'])
-
 set :database_file, 'database.yml'
 
 configure :production, :development do
@@ -19,6 +14,3 @@ configure :production, :development do
     encoding: 'utf8'
   )
 end
-
-require_all 'config/initializers'
-require_all 'app'
