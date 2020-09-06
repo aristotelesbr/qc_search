@@ -24,6 +24,8 @@ gem 'require_all', '~> 2.0'
 # implementations such as Rubinius and JRuby as well as as providing process
 # worker support to support CRuby well.
 gem 'puma', '~> 4.3', '>= 4.3.5'
+# Intelligent search made easy with Rails and Elasticsearch
+gem 'searchkick', '~> 4.4', '>= 4.4.1'
 
 group :development, :test do
   # Meta package that requires several pry extensions.
