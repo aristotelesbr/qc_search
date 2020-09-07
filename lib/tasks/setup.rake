@@ -21,7 +21,10 @@ namespace :app do
       )
     end
     questions_file.close
+
     puts "Total of imported questions: #{Question.count}."
+    puts '🚀 Indexing Questions...'
+    Question.reindex(resume: true)
     puts '✨Done'
 
     questions_access_file = File.open '/qc_search/data/question_access.json'
@@ -29,10 +32,12 @@ namespace :app do
 
     puts '🍺 Import question_access...'
     QuestionsAccess.insert_all(questions_access)
-
     questions_access_file.close
 
     puts "Total of imported questions_access: #{QuestionsAccess.count}."
+
+    puts '🚀 Indexing QuestionsAccesses...'
+    QuestionsAccess.reindex(resume: true)
     puts '✨Done'
   end
 end
