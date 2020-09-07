@@ -41,7 +41,7 @@ Run migrations:
 $ docker-compose run --rm app bundle exec rake db:migrate
 ```
 
-## Importa data
+## Import data
 
 ⚠️ Ensure elasticsearch has ben started
 
@@ -99,7 +99,7 @@ $ docker-compose run --rm app bundle exec rake rspec
 
 🎉
 
-[terminal]
+![terminal](https://github.com/aristotelesbr2014/qc_search/blob/master/data/terminal.png)
 
 ## Run application
 
@@ -109,7 +109,7 @@ $ docker-compose up
 
 ## How to use API
 
-🔥For subjects with hotter issues:
+🔥 For subjects with hotter issues:
 
 Send `GET` request to `/` (http://localhost:5000) queryString params `init_date`:
 
@@ -118,7 +118,7 @@ $ curl http://localhost:5000/?init_date=07-08-2019
 
 ```
 
-🔥For most accessed by period:
+🔥 For most accessed by period:
 
 ```
 $ curl http://localhost:5000/?init_date=07-08-2019&end_date=06-090-2020
@@ -156,15 +156,15 @@ The response will be something like:
 
 🎉
 
-[insominia]
+![insominia](https://github.com/aristotelesbr2014/qc_search/blob/master/data/insominia.png)
 
 # 🕐 Pending
 
 - [ ] Pagination
 - [ ] Facories objects
 - [ ] Provider Elastic test connection
-- [ ] Cache Later
+- [ ] Cache layer
 - [ ] Serach questions by week
-- [ ] Tests Enviroment
-- [ ] Mock Tests response
-- [ ] Strategies for cleaning test database
+- [ ] Tests enviroment config
+- [ ] Mock tests response
+- [ ] Strategies for cleaning test database(test enviroment)
