@@ -7,7 +7,7 @@ RSpec.describe Questions::Searcheable::Flow do
     before do
       question1 = Question.create(statement: 'question1', text: 'any_text', answer: 'A', daily_access: 70, discipline: 'matemática')
       question2 = Question.create(statement: 'question2', text: 'any_text', answer: 'B', daily_access: 25, discipline: 'português')
-      5.times do
+      10.times do
         QuestionsAccess.create(
           date: '06-09-2020',
           times_accessed: rand(100..1000),
