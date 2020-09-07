@@ -8,7 +8,7 @@ module Questions
           attributes :date
 
           def call!
-            Success result: { cache: true, date: date }
+            Success result: { date: date, cached_data: [] }
           end
         end
       end
