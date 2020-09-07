@@ -13,7 +13,7 @@ c:
 setup:
 	@docker-compose run --rm app bundle exec rake db:drop db:create db:migrate app:setup
 
-teste_prepare:
+tests_prepare:
 	@docker-compose run --rm app bundle exec rake db:test:prepare
 
 test:
