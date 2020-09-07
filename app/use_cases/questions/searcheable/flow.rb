@@ -33,7 +33,7 @@ module Questions
 
       def search_by_last_day(date)
         Questions::Searcheable::LastDay::Flow.call(
-          init_date: date
+          date: date
         )
       end
     end
