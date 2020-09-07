@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 ENV['RACK_ENV'] ||= 'test'
+ENV['ELASTICSEARCH_URL'] ||= 'elasticsearch:9200'
 
 require File.expand_path('../config/env', __dir__)
 require 'rspec'
