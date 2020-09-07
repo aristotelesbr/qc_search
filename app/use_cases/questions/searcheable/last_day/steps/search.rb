@@ -15,13 +15,13 @@ module Questions
 
           private
 
-          def query(srt_date)
+          def query(srt_date, page = 1)
             questions_ids = QuestionsAccess.search(
               load: false,
               where: { date: srt_date.to_date },
               order: { times_accessed: :desc },
-              page: 1,
-              per_page: 100
+              page: page,
+              per_page: 1000
             ).results.pluck('question_id')
 
             perform(questions_ids)
