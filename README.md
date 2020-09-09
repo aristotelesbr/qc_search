@@ -94,7 +94,7 @@ make test
 or
 
 ```
-$ docker-compose run --rm app bundle exec rake rspec
+$ docker-compose run --rm app bundle exec rspec
 ```
 
 🎉
